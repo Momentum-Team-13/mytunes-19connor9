@@ -1,6 +1,8 @@
-document.getElementById("submitButton").addEventListener("click", submit){
-    submit.preventDefault;
-};
+//document.getElementById("submitButton").addEventListener("click", submit)
+
+const form = document.querySelector("#myForm")
+const inputField = document.querySelector("#search")
+
 
 const musicBox = document.querySelector("#musicBox");
 musicBox.addEventListener('click', populateAudio);
@@ -8,14 +10,26 @@ const audioBox = document.getElementById("audioBox");
 const nowPlaying = document.getElementById("nowPlaying");
 console.log(nowPlaying)
 console.log(audioBox)
-console.log(musicBox);
+console.log(musicBox)
 
 audioBox.src = ""
 let itunesURL = ""
 
 
-function submit() {
-    let search = document.getElementById("search").value;
+form.addEventListener("submit", function (event) {
+    //submit  handles submission by click and by enter (and any other accessibility tools used)
+
+    event.preventDefault();
+    //what does preventDefault do? default behavior is for the page to reload, which we don't want because the results will go away until we ask them to with a new search
+    submit(inputField.value)
+    console.log(inputField.value)
+});
+
+
+
+
+function submit(search) {
+    // let search = document.getElementById("search").value;
     console.log(search);
     itunesURL = `https://itunes.apple.com/search?term=${textFix(search)}&entity=song`;
     console.log(itunesURL)
@@ -33,6 +47,7 @@ function submit() {
 
 
         })
+        .catch(err => alert(err))
 
 }
 /*
@@ -62,7 +77,7 @@ function searchForAudio(e) {
 */
 function populateSongs(data) {
     console.log(data.results["artistsName"])
-
+    musicBox.innerHTML = "";
     for (let song of data.results) {
         console.log(song.artistName)
         let songElement = document.createElement('div')
@@ -112,7 +127,3 @@ function populateAudio(evt) {
 function textFix(text) {
     return text.replaceAll(" ", "+")
 }
-
-
-
-
