@@ -1,0 +1,72 @@
+.title {
+    text-align: center;
+    font-size: 100px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#bar {
+    border-color: black;
+    border-style: groove;
+}
+
+#nowPlaying {
+    padding-left: 90px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+
+#musicBox {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: rgb(222, 219, 219);
+    margin-left: 50px;
+    margin-right: 50px;
+    justify-content: center;
+    border-style: solid;
+}
+
+.song {
+    width: 14.5%;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-style: groove;
+}
+
+#searchBox {}
+
+img {
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.audioFile {
+    display: none;
+}
+
+audio {
+    width: 90%;
+}
+
+#submitButton {
+    height: 30px;
+}
+
+#search {
+    width: 50%;
+    height: 30px;
+}
+
+.songTitle {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+
+.artistName {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+}

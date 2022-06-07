@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="main.js" defer></script>
+  <link rel="stylesheet" href="styles.css">
   <title>Music Search</title>
 </head>
+
 <body>
+  <h1 class="title">myTunes</h1>
+
+
+
+  <label for="Search"></label>
+  <input id="search" type="text" name="Search" placeholder="Search for music" style="margin: 0 auto; display: block;"
+    required>
+
+  <label for="submitButton"></label>
+  <input id="submitButton" type="submit" name="submitButton" placeholder="Search"
+    style="margin: 0 auto; display: block;"><br>
+
+
+
+  <div id="nowPlaying"></div>
+  <audio id="audioBox" controls src="" style="margin: 0 auto; display: block;">
+    Audio doesnt display
+  </audio><br>
+
+  <div class="title"></div>
+  <div id="bar"></div><br>
+
+  <div id="musicBox">
+
+  </div>
+  </div>
 </body>
+
 </html>
