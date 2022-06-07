@@ -33,6 +33,7 @@ function submit(search) {
     console.log(search);
     itunesURL = `https://itunes.apple.com/search?term=${textFix(search)}&entity=song`;
     console.log(itunesURL)
+    nowPlaying.innerText = "Press a song for preview"
     fetch(itunesURL, {
         method: 'GET',
         header: { 'Content-Type': 'application/json' }
